@@ -15,10 +15,11 @@ if(isset($_POST['submit'])){
       $_SESSION['user_id'] = $row['id'];
       header('location:login-home.php');
    }else{
-      $message[] = 'Incorrect Email and Password!';
+      $message[] = 'Incorrect Email or Password!';
    }
 
 }
+
 ?>
 
 <!DOCTYPE html>
