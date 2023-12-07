@@ -1,0 +1,126 @@
+ul.icon-sec li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+ul.icon-sec li {
+    list-style: none;
+}
+
+.top-header {
+    width: 100%;
+    background: #ff7c00;
+    padding: 10px 20px;
+    z-index: 999;
+
+}
+
+ul.icon-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center; /
+}
+
+ul.icon-sec img {
+    width: 25px;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+/* Style the header */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/* Center the content in the header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style the logo */
+.logo img {
+    width: 300px;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    padding: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.nav-item:hover{
+    color: #fff;
+    background: #ff7c00;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Style the button in the navigation menu */
+.button a {
+    background-color: #ff7c00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button a:hover {
+    background-color: #fff;
+    color: #ff7c00;
+}
+
+/* Hide the mobile menu by default */
+.mobile-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+/* Style the mobile menu items */
+.mobile-menu li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Style the mobile menu icon (hamburger icon) */
+.mobile-menu-icon {
+    display: none; /* Hide on desktop screens */
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Media query to show the mobile menu icon on smaller screens */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none; /* Hide the desktop menu on smaller screens */
+    }
+
+    .mobile-menu-icon {
+        display: block; /* Show the mobile menu icon on smaller screens */
+    }
+}
