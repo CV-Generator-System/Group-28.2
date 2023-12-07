@@ -368,8 +368,6 @@
         <script src = "assets/js/script.js"></script>
         <!-- app js -->
         <script src="assets/js/app.js"></script>
-        <!-- Include html2canvas from CDN -->
-        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
     </body>
 </html>
