@@ -132,3 +132,114 @@ const getUserInputs = () => {
         skills: fetchValues(['skill'], skillElem)
     }
 };
+
+
+
+//////////
+validaytion part &printt cv
+
+function validateFormData(elem, elemType, elemName){
+    // checking for text string and non empty string
+    if(elemType == validType.TEXT){
+        if(!strRegex.test(elem.value) || elem.value.trim().length == 0) addErrMsg(elem, elemName);
+        else removeErrMsg(elem);
+    }
+
+    // checking for only text string
+    if(elemType == validType.TEXT_EMP){
+        if(!strRegex.test(elem.value)) addErrMsg(elem, elemName);
+        else removeErrMsg(elem);
+    }
+
+    // checking for email
+    if(elemType == validType.EMAIL){
+        if(!emailRegex.test(elem.value) || elem.value.trim().length == 0) addErrMsg(elem, elemName);
+        else removeErrMsg(elem);
+    }
+
+    // checking for phone number
+    if(elemType == validType.PHONENO){
+        if(!phoneRegex.test(elem.value) || elem.value.trim().length == 0) addErrMsg(elem, elemName);
+        else removeErrMsg(elem);
+    }
+
+    // checking for only empty
+    if(elemType == validType.ANY){
+        if(elem.value.trim().length == 0) addErrMsg(elem, elemName);
+        else removeErrMsg(elem);
+    }
+}
+
+// adding the invalid text
+function addErrMsg(formElem, formElemName){
+    formElem.nextElementSibling.innerHTML = ${formElemName} is invalid;
+}
+
+// removing the invalid text 
+function removeErrMsg(formElem){
+    formElem.nextElementSibling.innerHTML = "";
+}
+
+// show the list data
+const showListData = (listData, listContainer) => {
+    listContainer.innerHTML = "";
+    listData.forEach(listItem => {
+        let itemElem = document.createElement('div');
+        itemElem.classList.add('preview-item');
+        
+        for(const key in listItem){
+            let subItemElem = document.createElement('span');
+            subItemElem.classList.add('preview-item-val');
+            subItemElem.innerHTML = ${listItem[key]};
+            itemElem.appendChild(subItemElem);
+        }
+
+        listContainer.appendChild(itemElem);
+    })
+}
+
+const displayCV = (userData) => {
+    nameDsp.innerHTML = userData.firstname + " " + userData.middlename + " " + userData.lastname;
+    phonenoDsp.innerHTML = userData.phoneno;
+    emailDsp.innerHTML = userData.email;
+    addressDsp.innerHTML = userData.address;
+    designationDsp.innerHTML = userData.designation;
+    summaryDsp.innerHTML = userData.summary;
+    showListData(userData.projects, projectsDsp);
+    showListData(userData.achievements, achievementsDsp);
+    showListData(userData.skills, skillsDsp);
+    showListData(userData.educations, educationsDsp);
+    showListData(userData.experiences, experiencesDsp);
+}
+
+// generate CV
+const generateCV = () => {
+    let userData = getUserInputs();
+    displayCV(userData);
+    console.log(userData);
+}
+
+function previewImage(){
+    let oFReader = new FileReader();
+    oFReader.readAsDataURL(imageElem.files[0]);
+    oFReader.onload = function(ofEvent){
+        imageDsp.src = ofEvent.target.result;
+    }
+}
+
+function downloadCV() {
+    const cvPreviewContainer = document.getElementById('preview-sc');
+
+    setTimeout(() => {
+        html2pdf(cvPreviewContainer, {
+            margin: 10,
+            filename: 'your_cv.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        }).then(function (pdf) {
+            console.log(pdf);
+            pdf.save();
+        });
+    }, 1000);
+}
