@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+// Check if user is logged in or not
 $userLoggedIn = isset($_SESSION['user_id']);
 ?>
 
@@ -12,6 +13,8 @@ $userLoggedIn = isset($_SESSION['user_id']);
         <title>CV Generator-Home</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Stylesheets -->
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -28,6 +31,7 @@ $userLoggedIn = isset($_SESSION['user_id']);
             </i>View Your Profile</a>
         </div>
 
+         <!-- Home Banner -->
         <div class="image-banner">
         <img src="assets/images/home-banner.jpg" alt="Home Banner Image">
             <div class="text-overlay">
