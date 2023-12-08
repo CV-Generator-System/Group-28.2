@@ -12,15 +12,19 @@
     <body>
 
     <?php include('inc/header.php'); ?>
-
+        <!-- Main content sections -->
         <section id = "about-sc" class = "">
+            <!-- Form for entering CV details -->
             <div class = "container">
                 <div class = "about-cnt">
                     <form action="" class="cv-form" id = "cv-form">
+                        <!-- About section -->
                         <div class = "cv-form-blk">
+                            <!-- Title of About section -->
                             <div class = "cv-form-row-title">
                                 <h3>about section</h3>
                             </div>
+                            <!-- Inputs for personal details -->
                             <div class = "cv-form-row cv-form-row-about">
                                 <div class = "cols-3">
                                     <div class = "form-elem">
@@ -350,7 +354,7 @@
                 </div>
             </div>
         </section>
-
+       <!-- Download button -->
         <section class="download-btn-sc">
             <div class="container">
                 <button type="button" class="download-btn btn btn-primary" onclick="printCV()">Download CV</button>
