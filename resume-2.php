@@ -7,7 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- custom css -->
-        <link rel="stylesheet" href="assets/css/temp-2.css">
+        <link rel="stylesheet" href="assets/css/temp2.css">
+
     </head>
     <body>
 
@@ -276,6 +277,38 @@
         <section id = "preview-sc" class = "print_area">
             <div class = "container">
                 <div class = "preview-cnt">
+                    
+
+                    <div class = "preview-cnt-r bg-white">
+                        <div class = "preview-blk">
+                            <div class = "preview-blk-title">
+                                <h3>Achievements</h3>
+                            </div>
+                            <div class = "achievements-items preview-blk-list" id = "achievements_dsp"></div>
+                        </div>
+
+                        <div class = "preview-blk">
+                            <div class = "preview-blk-title">
+                                <h3>educations</h3>
+                            </div>
+                            <div class = "educations-items preview-blk-list" id = "educations_dsp"></div>
+                        </div>
+
+                        <div class = "preview-blk">
+                            <div class = "preview-blk-title">
+                                <h3>experiences</h3>
+                            </div>
+                            <div class = "experiences-items preview-blk-list" id = "experiences_dsp"></div>
+                        </div>
+
+                        <div class = "preview-blk">
+                            <div class = "preview-blk-title">
+                                <h3>projects</h3>
+                            </div>
+                            <div class = "projects-items preview-blk-list" id = "projects_dsp"></div>
+                        </div>
+                    </div>
+
                     <div class = "preview-cnt-l bg-green text-white">
                         <div class = "preview-blk">
                             <div class = "preview-image">
@@ -318,36 +351,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class = "preview-cnt-r bg-white">
-                        <div class = "preview-blk">
-                            <div class = "preview-blk-title">
-                                <h3>Achievements</h3>
-                            </div>
-                            <div class = "achievements-items preview-blk-list" id = "achievements_dsp"></div>
-                        </div>
-
-                        <div class = "preview-blk">
-                            <div class = "preview-blk-title">
-                                <h3>educations</h3>
-                            </div>
-                            <div class = "educations-items preview-blk-list" id = "educations_dsp"></div>
-                        </div>
-
-                        <div class = "preview-blk">
-                            <div class = "preview-blk-title">
-                                <h3>experiences</h3>
-                            </div>
-                            <div class = "experiences-items preview-blk-list" id = "experiences_dsp"></div>
-                        </div>
-
-                        <div class = "preview-blk">
-                            <div class = "preview-blk-title">
-                                <h3>projects</h3>
-                            </div>
-                            <div class = "projects-items preview-blk-list" id = "projects_dsp"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -368,6 +371,9 @@
         <script src = "assets/js/script.js"></script>
         <!-- app js -->
         <script src="assets/js/app.js"></script>
+        <!--html2canva-->
+        <!-- Include html2canvas from CDN -->
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
     </body>
 </html>
