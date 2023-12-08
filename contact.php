@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+// Check if user is logged in or not
 $userLoggedIn = isset($_SESSION['user_id']);
 
 ?>
@@ -28,7 +29,7 @@ $userLoggedIn = isset($_SESSION['user_id']);
             <a href = "http://localhost/cv-generator/update_profile.php" class = "admin-bar-link"><i class="fa fa-user" aria-hidden="true">
             </i>View Your Profile</a>
         </div>
-
+<!-- Contact Banner -->
         <div class="sub-page-image-banner">
         <img src="assets/images/contact-banner.jpg" alt="Contact Banner Image">
             <div class="text-overlay">
